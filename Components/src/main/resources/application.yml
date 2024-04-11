@@ -1,0 +1,18 @@
+vm_host: 192.168.231.129
+kafka_port: 9093
+server:
+  port: 8080
+spring:
+  kafka:
+    bootstrap-servers: ${vm_host}:${kafka_port}
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+    consumer:
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+easy-es:
+  address: ${vm_host}:9200
+logging:
+  level:
+    tracer: trace # 开启trace级别日志,在开发时可以开启此配置,则控制台可以打印es全部请求信息及DSL语句,为了避免重复,开启此项配置后,可以将EE的print-dsl设置为false.

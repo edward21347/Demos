@@ -10,7 +10,7 @@ public class TestProducer {
     public static void main(String[] args) {
         //异步发送
         Properties props = new Properties();
-        props.put("bootstrap.servers", "172.16.8.128:9093");
+        props.put("bootstrap.servers", "192.168.231.128:9093");
         props.put("linger.ms", 1);
         props.put("key.serializer", "org.apache.kafka.common.serialization.StringSerializer");
         props.put("value.serializer", "org.apache.kafka.common.serialization.StringSerializer");
@@ -23,7 +23,7 @@ public class TestProducer {
 
         //同步发送
 //        Properties props = new Properties();
-//        props.put("bootstrap.servers", "172.16.8.128:9093");
+//        props.put("bootstrap.servers", "192.168.231.128:9093");
 //        props.put("transactional.id", "my-transactional-id");
 //        Producer<String, String> producer = new KafkaProducer<>(props, new StringSerializer(), new StringSerializer());
 //
