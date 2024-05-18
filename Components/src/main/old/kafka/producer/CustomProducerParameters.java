@@ -13,7 +13,7 @@ public class CustomProducerParameters {
         Properties properties = new Properties();
 
         //连接集群
-        properties.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, "172.16.8.128:9093");
+        properties.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, "192.168.231.128:9093");
         //指定key和value序列化类型(必须配置)
         properties.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, StringSerializer.class.getName());
         properties.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, StringSerializer.class.getName());
