@@ -2,6 +2,9 @@ import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisPool;
 import redis.clients.jedis.JedisPoolConfig;
 
+/**
+ * jedis是线程不安全的，因此需要连接池
+ */
 public class JedisConnectionPool {
     private static final JedisPool jedisPool;
 
