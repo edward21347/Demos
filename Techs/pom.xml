@@ -12,6 +12,8 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <spring-boot.version>2.6.13</spring-boot.version>
+        <local-server>192.168.37.128</local-server>
+        <jdcloud-server>117.72.14.6</jdcloud-server>
     </properties>
     <dependencies>
         <dependency>
