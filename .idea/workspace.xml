@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="ALL" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="75fa3382-e1b2-4c38-b161-708968e0768c" name="更改" comment="producer事务">
+      <change afterPath="$PROJECT_DIR$/Jedis-demo/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Components/src/main/java/com/example/kafka/producer/CustomProducerTransactions.java" beforeDir="false" afterPath="$PROJECT_DIR$/Components/src/main/java/com/example/kafka/producer/CustomProducerTransactions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Techs/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Techs/pom.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="alwaysUpdateSnapshots" value="true" />
+        <option name="localRepository" value="C:\Utils\apache-maven-3.9.4\maven-repo" />
+        <option name="mavenHome" value="C:/Utils/apache-maven-3.9.4" />
+        <option name="useMavenConfig" value="true" />
+        <option name="userSettingsFile" value="C:\Utils\apache-maven-3.9.4\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2adEZ3Y5zNlCeaq0YxV47yYIMM3" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "jdk.selected.JAVA_MODULE": "1.8 (2)",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "模块",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.38045976",
+    "settings.build.tools.auto.reload": "ALL",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "spring.configuration.checksum": "c3e6d5624e4d0d5208e56127cd38dda6",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RebelAgentSelection">
+    <selection>jr</selection>
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.example.kafka.producer" />
+    </key>
+  </component>
+  <component name="RunManager" selected="应用程序.QuickStart">
+    <configuration name="CustomProducerTransactions" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.kafka.producer.CustomProducerTransactions" />
+      <module name="Components" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.kafka.producer.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="QuickStart" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="QuickStart" />
+      <module name="Jedis-demo" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="应用程序.QuickStart" />
+        <item itemvalue="应用程序.CustomProducerTransactions" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="75fa3382-e1b2-4c38-b161-708968e0768c" name="更改" comment="" />
+      <created>1691676724177</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1691676724177</updated>
+      <workItem from="1704640109950" duration="39000" />
+      <workItem from="1704640151035" duration="66000" />
+      <workItem from="1704640223891" duration="116000" />
+      <workItem from="1704640347335" duration="423000" />
+      <workItem from="1704640774591" duration="2795000" />
+      <workItem from="1704646228300" duration="282000" />
+      <workItem from="1704721470711" duration="1038000" />
+      <workItem from="1716026080600" duration="136000" />
+      <workItem from="1716026310199" duration="712000" />
+      <workItem from="1716027160234" duration="1458000" />
+    </task>
+    <task id="LOCAL-00001" summary="producer事务">
+      <option name="closed" value="true" />
+      <created>1704646504555</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1704646504555</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="producer事务" />
+    <option name="LAST_COMMIT_MESSAGE" value="producer事务" />
+  </component>
+</project>
