@@ -16,3 +16,23 @@ easy-es:
 logging:
   level:
     tracer: trace # 开启trace级别日志,在开发时可以开启此配置,则控制台可以打印es全部请求信息及DSL语句,为了避免重复,开启此项配置后,可以将EE的print-dsl设置为false.
+jodconverter:
+  remote:
+    url: http://${vm_host}:8100
+    enabled: true
+    connect-timeout: 5000  # 提高连接超时时间到5000毫秒（5秒）
+    socket-timeout: 150000  # 提高套接字超时时间到15000毫秒（15秒）
+    pool-size: 10
+    task-execution-timeout: 120000 #设置单个任务的最大执行时间
+  local:
+    enabled: false
+    office-home: C:\Program Files\LibreOffice
+    max-tasks-per-process: 10
+    port-numbers: 8100
+#  remote:
+#    enabled: true
+#    url: ${vm_host}:8100
+#    connect-timeout: 10000  # 提高连接超时时间到5000毫秒（5秒）
+#    socket-timeout: 15000  # 提高套接字超时时间到15000毫秒（15秒）
+#    pool-size: 10
+#    task-execution-timeout: 120000 #设置单个任务的最大执行时间
