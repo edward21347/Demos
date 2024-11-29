@@ -13,6 +13,7 @@
         <module>Components</module>
         <module>Jedis-demo</module>
         <module>SpringDataRedis</module>
+        <module>rocketmq</module>
     </modules>
     <properties>
         <java.version>1.8</java.version>
