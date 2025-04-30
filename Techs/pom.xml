@@ -27,11 +27,11 @@
         <jdcloud-server>117.72.14.6</jdcloud-server>
     </properties>
     <dependencies>
-<!--        <dependency>-->
-<!--            <groupId>e-iceblue</groupId>-->
-<!--            <artifactId>spire.doc.free</artifactId>-->
-<!--            <version>5.2.0</version>-->
-<!--        </dependency>-->
+        <dependency>
+            <groupId>e-iceblue</groupId>
+            <artifactId>spire.doc.free</artifactId>
+            <version>5.2.0</version>
+        </dependency>
             <dependency>
                 <groupId>org.apache.poi</groupId>
                 <artifactId>poi</artifactId>

@@ -8,15 +8,20 @@ import org.apache.rocketmq.common.message.MessageExt;
 import java.util.concurrent.TimeUnit;
 
 /**
- * 发送同步消息
+ * 发送异步消息：
+ * 1.创建生产者，指定组名
+ * 2.指定nameserver地址
+ * 3.启动producer
+ * 4.创建消息对象
+ * 5.发送消息，设置回调
+ * 6.关闭生产者
  */
 public class Producer {
-
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) throws Exception{
         //1.创建消息生产者producer，并制定生产者组名
-        TransactionMQProducer producer = new TransactionMQProducer("group5");
+        TransactionMQProducer producer = new TransactionMQProducer("group1");
         //2.指定Nameserver地址
-        producer.setNamesrvAddr("192.168.25.135:9876;192.168.25.138:9876");
+        producer.setNamesrvAddr("rocketmq-nameserver2:9876;rocketmq-nameserver1:9876");
 
         //添加事务监听器
         producer.setTransactionListener(new TransactionListener() {
@@ -77,4 +82,5 @@ public class Producer {
         //6.关闭生产者producer
         //producer.shutdown();
     }
+
 }

@@ -23,6 +23,7 @@ public class SyncProducer {
         producer.start();
         for (int i = 0; i < 10; i++) {
             Message msg = new Message("base","tag1",("Hello World"+i+1).getBytes());
+            msg.setDelayTimeLevel(2);//设置延迟发送，延迟level2 -> 5s
             SendResult result = producer.send(msg);
             System.out.println("发送结果:" + result);
             TimeUnit.SECONDS.sleep(1);
