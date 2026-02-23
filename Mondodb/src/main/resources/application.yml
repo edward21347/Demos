@@ -1,0 +1,5 @@
+spring:
+  #数据源配置
+  data:
+    mongodb:
+      uri: mongodb://127.0.0.1:27017/articled
