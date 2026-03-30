@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CompilerConfiguration">
-    <excludeFromCompile>
-      <directory url="file://$PROJECT_DIR$/Jedis-demo/src/main/resources/archetype-resources" includeSubdirectories="true" />
-    </excludeFromCompile>
     <annotationProcessing>
       <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
@@ -11,9 +8,20 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="Components" />
-        <module name="Jedis-demo" />
         <module name="Techs" />
+        <module name="rocketmq" />
+        <module name="DDD" />
+        <module name="rocketmq-demo" />
+        <module name="Jedis-demo" />
+        <module name="SpringDataRedis" />
+        <module name="demo" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="FileService" target="1.8" />
+      <module name="MultiEnvConfig" target="1.8" />
+      <module name="MultiEnvDemo" target="1.8" />
+      <module name="rocketmq2" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>
