@@ -7,7 +7,7 @@ import org.apache.rocketmq.common.message.Message;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
-
+//发送消息列表，为批量发送
 public class Producer {
     public static void main(String[] args) throws Exception{
         DefaultMQProducer producer = new DefaultMQProducer("group1");

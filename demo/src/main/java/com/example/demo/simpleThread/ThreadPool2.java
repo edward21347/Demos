@@ -14,9 +14,9 @@ import java.util.concurrent.TimeUnit;
  * 基于阻塞队列简易线程池，加入拒绝策略，超时回收机制
  */
 public class ThreadPool2 {
-
+    //任务队列
     private final BlockingQueue<Runnable> workerQueue;
-
+    //线程队列
     private final List<Worker> workers = new ArrayList<>();
 
     // 线程池核心线程数
@@ -41,7 +41,7 @@ public class ThreadPool2 {
             this.addWorker(task,true);
             return;
         }
-
+        //若当前线程超过核心线程数，加入等待队列
         boolean enqueued = workerQueue.offer(task);
         if(enqueued){
             return;
@@ -77,6 +77,7 @@ public class ThreadPool2 {
         @Override
         public void run() {
             try {
+                //先执行自己持有的任务，在执行等待队列的任务，若未获取到任务则销毁
                 while (task != null || (task = getTaskFromQueue()) != null) {
                     task.run();
                     task = null;
@@ -97,7 +98,7 @@ public class ThreadPool2 {
             if(tryDestroy && timeOut){
                 return null;
             }
-
+            //等待时间内未获取到任务，销毁超过核心线程数的线程
             try {
                 Runnable r = tryDestroy ? workerQueue.poll(keepAliveTime, TimeUnit.NANOSECONDS) : workerQueue.take();
                 if(r != null){

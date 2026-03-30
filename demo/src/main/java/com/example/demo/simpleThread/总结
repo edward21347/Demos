@@ -1,0 +1,1 @@
+Thread类start方法向操作系统申请资源并获得cpu执行权，然后执行run()
