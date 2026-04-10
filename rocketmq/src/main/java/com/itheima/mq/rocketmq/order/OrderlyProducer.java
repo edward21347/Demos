@@ -6,7 +6,11 @@ import org.apache.rocketmq.client.producer.MessageQueueSelector;
 import org.apache.rocketmq.common.message.Message;
 import org.apache.rocketmq.common.message.MessageQueue;
 import org.apache.rocketmq.remoting.common.RemotingHelper;
-
+/**
+ * 顺序消息生产者：
+ *  调用send方法时，实现new MessageQueueSelector()的select方法，其中实现队列选择逻辑
+ *  一般基于一个不变的业务主键来选择队列
+ */
 import java.util.List;
 public class OrderlyProducer {
     public static void main(String[] args) throws Exception{
@@ -17,6 +21,7 @@ public class OrderlyProducer {
         for (int i = 0; i < orders.size(); i++) {
             final OrderStep order = orders.get(i);
             Message msg = new Message("OrderTopicTest","order_"+order.getOrderId(), JSONObject.toJSONString(order).getBytes(RemotingHelper.DEFAULT_CHARSET));
+            msg.setKeys(String.valueOf(order.getOrderId()));
             // 使用顺序发送，基于订单ID选择队列
             producer.send(msg, new MessageQueueSelector() {
                 @Override

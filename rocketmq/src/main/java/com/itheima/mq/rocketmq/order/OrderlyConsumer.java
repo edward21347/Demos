@@ -10,6 +10,13 @@ import org.apache.rocketmq.common.message.MessageExt;
 import java.io.UnsupportedEncodingException;
 import java.util.List;
 
+/**
+ * 顺序消费者
+ * 编程模型：
+ *  调用registerMessageListener注册listener，实现consumeMessage方法
+ *  方法内部获取到消息队列，对消息体(body)进行处理
+ *  成功/失败，返回对应的状态码
+ */
 public class OrderlyConsumer {
     public static void main(String[] args) throws Exception{
         DefaultMQPushConsumer consumer = new DefaultMQPushConsumer("group1");
@@ -24,13 +31,11 @@ public class OrderlyConsumer {
                 for (MessageExt msg : msgs) {
                     try {
                         String orderId = msg.getKeys();
-                        // 解析消息体
+                        int queueId = msg.getQueueId();
+                        // 解析消息体并处理
                         String body = new String(msg.getBody(), "UTF-8");
                         OrderStep orderStep = JSONObject.parseObject(body, OrderStep.class);
-
-                        System.out.println("orderId:"+orderId+" 线程:"+Thread.currentThread().getName()+" 订单:"+orderStep);
-
-                        System.out.println("订单处理完毕！");
+                        System.out.println("orderId:"+orderId+" 线程:"+Thread.currentThread().getName()+" 队列索引:"+queueId+" 订单:"+orderStep);
                     } catch (UnsupportedEncodingException e) {
                         System.err.printf("消费消息失败: %s, 异常: %s%n",
                                 msg.getMsgId(), e.getMessage());
